@@ -1,5 +1,8 @@
 # 🤖 AGENTIC CONTENT WRITER - End-to-End System
 
+🎥 **Demo Video (YouTube)**  
+👉 https://youtu.be/zOEGNGK7xrs 
+
 An advanced AI-powered content creation platform using **AutoGen AgentChat** and **Streamlit**. The system coordinates a team of specialized agents to research, write, critique, and deliver high-quality SEO-optimized content directly to your email.
 
 ## 🏗️ Architectural Workflow
@@ -87,4 +90,48 @@ graph TD
 - **UI**: Streamlit
 - **LLM**: OpenAI GPT models
 - **Search**: SerpApi (Google Search)
+
 - **SMTP**: Python `smtplib` (SSL/TLS)
+
+##🚀 End-to-End Workflow
+Phase 1: Research & Discovery
+
+User enters a topic (e.g., AI in ERP) and email address
+
+Search Agent fetches real-time Google results via SerpAPI
+
+Phase 2: Content Generation
+
+Writer Agent generates:
+
+Main article content (Markdown)
+
+SEO metadata (Title, Meta Description, Keywords)
+
+Phase 3: Recursive Critique & Optimization
+
+Content Critic evaluates:
+
+Grammar
+
+Clarity
+
+Originality
+
+Value (Score: 0–100)
+
+SEO Critic evaluates:
+
+Keyword usage
+
+Metadata quality
+
+Writer iterates until the minimum score threshold (e.g., 90/100) is met
+
+Phase 4: Delivery & Termination
+
+Once approved, content is marked as CONTENT_APPROVED
+
+Email Agent sends final content to the user via SMTP
+
+User can regenerate content by increasing the quality threshold
