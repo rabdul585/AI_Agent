@@ -93,45 +93,54 @@ graph TD
 
 - **SMTP**: Python `smtplib` (SSL/TLS)
 
-##🚀 End-to-End Workflow
-Phase 1: Research & Discovery
+## 🚀 End-to-End Workflow
 
-User enters a topic (e.g., AI in ERP) and email address
+### Phase 1: Research & Discovery
+- User enters a topic (e.g., **AI in ERP**) and email address
+- Search Agent fetches real-time Google results via **SerpAPI**
 
-Search Agent fetches real-time Google results via SerpAPI
+---
 
-Phase 2: Content Generation
+### Phase 2: Content Generation
+The Writer Agent generates:
+- Main article content in **Markdown**
+- SEO metadata:
+  - Title
+  - Meta Description
+  - Keywords
 
-Writer Agent generates:
+---
 
-Main article content (Markdown)
+### Phase 3: Recursive Critique & Optimization
 
-SEO metadata (Title, Meta Description, Keywords)
+**Content Critic evaluates:**
+- Grammar
+- Clarity
+- Originality
+- Value (Score: **0–100**)
 
-Phase 3: Recursive Critique & Optimization
+**SEO Critic evaluates:**
+- Keyword usage
+- Metadata quality
 
-Content Critic evaluates:
+- Writer iterates until the **minimum score threshold** (e.g., **90/100**) is met
 
-Grammar
+---
 
-Clarity
+### Phase 4: Delivery & Termination
+- Once approved, content is marked as `CONTENT_APPROVED`
+- Email Agent sends the final content to the user via **SMTP**
+- User can regenerate content by increasing the quality threshold
 
-Originality
+---
 
-Value (Score: 0–100)
+## 🎯 Use Cases
+- SEO blog automation
+- Technical article generation
+- AI documentation pipelines
+- Marketing content automation
+- GenAI & Agentic AI portfolio showcase
 
-SEO Critic evaluates:
 
-Keyword usage
 
-Metadata quality
 
-Writer iterates until the minimum score threshold (e.g., 90/100) is met
-
-Phase 4: Delivery & Termination
-
-Once approved, content is marked as CONTENT_APPROVED
-
-Email Agent sends final content to the user via SMTP
-
-User can regenerate content by increasing the quality threshold
